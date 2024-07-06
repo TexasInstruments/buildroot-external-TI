@@ -31,3 +31,4 @@ mkdir -p $TARGET_DIR/boot/dtb/ti
 
 cp $BINARIES_DIR/Image $TARGET_DIR/boot
 cp $BINARIES_DIR/$dtb_file $TARGET_DIR/boot/dtb/ti
+cat $BR2_EXTERNAL_TI_PATH/board/ti/am62x-sk/inittab_additions >> $TARGET_DIR/etc/inittab
