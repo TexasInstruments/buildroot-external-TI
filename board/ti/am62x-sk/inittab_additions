@@ -1,1 +1,0 @@
-::sysinit:/bin/mkdir -p /tmp/wayland
