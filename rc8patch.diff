@@ -1,0 +1,95 @@
+diff --git a/board/ti/common/patches/linux/linux.hash b/board/ti/common/patches/linux/linux.hash
+index 460629a..00c2710 100644
+--- a/board/ti/common/patches/linux/linux.hash
++++ b/board/ti/common/patches/linux/linux.hash
+@@ -9,3 +9,5 @@ sha256  0e54d2f518c7bf502f6723b22845a96062db25d063f2d188e29e1ac3b06de9d4  linux-
+ sha256  d2d79ee3741d0e8eb02342450d754e784ed7b4d6b742575994b4d689ccfd27ef  linux-10.00.07-rt-git4.tar.gz
+ sha256  4fbe3fbf6ecb62e7197549eaee3b964b319a70ebdbcf55352c70564b078be595  linux-10.01.06-git4.tar.gz
+ sha256  f5bf9fe08ce84b8ed515f105ce74e59d5ca6b4e8b702ae87b744d5793aea88e3  linux-10.01.06-rt-git4.tar.gz
++sha256  5feab804969c930b4d2b8f823784b94b2c0380cd4847788f8055189a30b87e13  linux-10.01.08-git4.tar.gz
++sha256  0e89cb1756e931e791522eb6f6e544ae500b40486532c2525e41c5ba7ac454ad  linux-10.01.08-rt-git4.tar.gz
+diff --git a/board/ti/common/patches/ti-k3-boot-firmware/ti-k3-boot-firmware.hash b/board/ti/common/patches/ti-k3-boot-firmware/ti-k3-boot-firmware.hash
+index 60ca054..7aeafa8 100644
+--- a/board/ti/common/patches/ti-k3-boot-firmware/ti-k3-boot-firmware.hash
++++ b/board/ti/common/patches/ti-k3-boot-firmware/ti-k3-boot-firmware.hash
+@@ -5,3 +5,4 @@ sha256  c7bb628a7493bed3468543b09cec60079d328766b7d10adb336cdcd30672d0af  ti-lin
+ sha256  8d33e13e200f19a0dbfbf1521ddbdca2b4af01852b546d346ff366bb4d6788bc  ti-linux-firmware-10.00.05.tar.xz
+ sha256  d8fe85c605ee0a3f648afa9215cf562634dfb2beb8f6db750a8a82da642417af  ti-linux-firmware-10.00.07.tar.xz
+ sha256  51d21ffa8221f49cb61a4293be46a04c4f99a603892985faeb4e1e9817720d68  ti-linux-firmware-10.01.06.tar.xz
++sha256  df8507135613cfac089b4035de278d6349e28951239c31fd8596fbd8db019d83  ti-linux-firmware-10.01.08.tar.xz
+diff --git a/board/ti/common/patches/ti-k3-r5-loader/ti-k3-r5-loader.hash b/board/ti/common/patches/ti-k3-r5-loader/ti-k3-r5-loader.hash
+index 2d4d9e7..abab9a1 100644
+--- a/board/ti/common/patches/ti-k3-r5-loader/ti-k3-r5-loader.hash
++++ b/board/ti/common/patches/ti-k3-r5-loader/ti-k3-r5-loader.hash
+@@ -4,3 +4,4 @@ sha256  5614a246aee7162f85527b266f7931504c223c36470ca0b9a1b95615ef620cc7  ti-k3-
+ sha256  333d376daedc4ed9404460e11b1cff086dd828cfde486a4783327d54f05fa545  ti-k3-r5-loader-10.00.05-git4.tar.gz
+ sha256  877fc0e3f12a8f3c24342e97a0cc6cee3c9abb83d7be457c88cd5324454b63b3  ti-k3-r5-loader-10.00.07-git4.tar.gz
+ sha256  b4609e839e69d200331fb3e54214f3afcc70fe9fb7ea7ed252266314ff4dda77  ti-k3-r5-loader-10.01.06-git4.tar.gz
++sha256  5d776a7dca009cb14e73a7ee865c6a1a29a075a8c6baec53122c4d9376922205  ti-k3-r5-loader-10.01.08-git4.tar.gz
+diff --git a/board/ti/common/patches/uboot/uboot.hash b/board/ti/common/patches/uboot/uboot.hash
+index c504595..c2e4b96 100644
+--- a/board/ti/common/patches/uboot/uboot.hash
++++ b/board/ti/common/patches/uboot/uboot.hash
+@@ -4,3 +4,4 @@ sha256  1aafe2dd980bcce8b172bb526a4d9d4d7db7bace59cfdadc51791d338533bdf6  uboot-
+ sha256  b11665d790f1b4534e89fa71a880c90ac2461abd1b7fc76c8f88d0c850f25daa  uboot-10.00.05-git4.tar.gz
+ sha256  067b2979076994862d7f750f6baa7c17335d63320cee75a32a60e311596c7aac  uboot-10.00.07-git4.tar.gz
+ sha256  8c82a7aca3cb63188077cfdc212a61779a18dffb6ee5f922108cee8bc26a41b5  uboot-10.01.06-git4.tar.gz
++sha256  3c82b9a33afe3faa54388d9d2e40df3f09d13b123b660123086f9fbb73e7ea66  uboot-10.01.08-git4.tar.gz
+diff --git a/configs/ti_release_am62x_sk_defconfig b/configs/ti_release_am62x_sk_defconfig
+index 799448b..5a8da0e 100644
+--- a/configs/ti_release_am62x_sk_defconfig
++++ b/configs/ti_release_am62x_sk_defconfig
+@@ -12,7 +12,7 @@ BR2_ROOTFS_POST_IMAGE_SCRIPT_ARGS="-c $(BR2_EXTERNAL_TI_PATH)/board/ti/common/am
+ BR2_LINUX_KERNEL=y
+ BR2_LINUX_KERNEL_CUSTOM_GIT=y
+ BR2_LINUX_KERNEL_CUSTOM_REPO_URL="https://git.ti.com/git/ti-linux-kernel/ti-linux-kernel.git"
+-BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="10.01.06"
++BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="10.01.08"
+ BR2_LINUX_KERNEL_USE_ARCH_DEFAULT_CONFIG=y
+ BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="$(BR2_DL_DIR)/linux/git/kernel/configs/ti_arm64_prune.config"
+ BR2_LINUX_KERNEL_DTS_SUPPORT=y
+@@ -42,13 +42,13 @@ BR2_TARGET_OPTEE_OS_PLATFORM="k3-am62x"
+ BR2_TARGET_TI_K3_R5_LOADER=y
+ BR2_TARGET_TI_K3_R5_LOADER_CUSTOM_GIT=y
+ BR2_TARGET_TI_K3_R5_LOADER_CUSTOM_REPO_URL="https://git.ti.com/git/ti-u-boot/ti-u-boot.git"
+-BR2_TARGET_TI_K3_R5_LOADER_CUSTOM_REPO_VERSION="10.01.06"
++BR2_TARGET_TI_K3_R5_LOADER_CUSTOM_REPO_VERSION="10.01.08"
+ BR2_TARGET_TI_K3_R5_LOADER_BOARD_DEFCONFIG="am62x_evm_r5"
+ BR2_TARGET_UBOOT=y
+ BR2_TARGET_UBOOT_BUILD_SYSTEM_KCONFIG=y
+ BR2_TARGET_UBOOT_CUSTOM_GIT=y
+ BR2_TARGET_UBOOT_CUSTOM_REPO_URL="https://git.ti.com/git/ti-u-boot/ti-u-boot.git"
+-BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION="10.01.06"
++BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION="10.01.08"
+ BR2_TARGET_UBOOT_BOARD_DEFCONFIG="am62x_evm_a53"
+ BR2_TARGET_UBOOT_NEEDS_DTC=y
+ BR2_TARGET_UBOOT_NEEDS_OPENSSL=y
+diff --git a/configs/ti_release_am62x_sk_rt_defconfig b/configs/ti_release_am62x_sk_rt_defconfig
+index 5ee1119..1988b4b 100644
+--- a/configs/ti_release_am62x_sk_rt_defconfig
++++ b/configs/ti_release_am62x_sk_rt_defconfig
+@@ -12,7 +12,7 @@ BR2_ROOTFS_POST_IMAGE_SCRIPT_ARGS="-c $(BR2_EXTERNAL_TI_PATH)/board/ti/common/am
+ BR2_LINUX_KERNEL=y
+ BR2_LINUX_KERNEL_CUSTOM_GIT=y
+ BR2_LINUX_KERNEL_CUSTOM_REPO_URL="https://git.ti.com/git/ti-linux-kernel/ti-linux-kernel.git"
+-BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="10.01.06-rt"
++BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="10.01.08-rt"
+ BR2_LINUX_KERNEL_USE_ARCH_DEFAULT_CONFIG=y
+ BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES="$(BR2_DL_DIR)/linux/git/kernel/configs/ti_arm64_prune.config $(BR2_DL_DIR)/linux/git/kernel/configs/ti_rt.config"
+ BR2_LINUX_KERNEL_DTS_SUPPORT=y
+@@ -42,13 +42,13 @@ BR2_TARGET_OPTEE_OS_PLATFORM="k3-am62x"
+ BR2_TARGET_TI_K3_R5_LOADER=y
+ BR2_TARGET_TI_K3_R5_LOADER_CUSTOM_GIT=y
+ BR2_TARGET_TI_K3_R5_LOADER_CUSTOM_REPO_URL="https://git.ti.com/git/ti-u-boot/ti-u-boot.git"
+-BR2_TARGET_TI_K3_R5_LOADER_CUSTOM_REPO_VERSION="10.01.06"
++BR2_TARGET_TI_K3_R5_LOADER_CUSTOM_REPO_VERSION="10.01.08"
+ BR2_TARGET_TI_K3_R5_LOADER_BOARD_DEFCONFIG="am62x_evm_r5"
+ BR2_TARGET_UBOOT=y
+ BR2_TARGET_UBOOT_BUILD_SYSTEM_KCONFIG=y
+ BR2_TARGET_UBOOT_CUSTOM_GIT=y
+ BR2_TARGET_UBOOT_CUSTOM_REPO_URL="https://git.ti.com/git/ti-u-boot/ti-u-boot.git"
+-BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION="10.01.06"
++BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION="10.01.08"
+ BR2_TARGET_UBOOT_BOARD_DEFCONFIG="am62x_evm_a53"
+ BR2_TARGET_UBOOT_NEEDS_DTC=y
+ BR2_TARGET_UBOOT_NEEDS_OPENSSL=y
