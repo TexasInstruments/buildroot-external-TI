@@ -16,13 +16,25 @@ start() {
     # Start Weston
     printf "Starting weston: "
     /usr/bin/weston > /var/log/weston.log 2>&1 &
-    [ $? = 0 ] && echo "OK" || echo "FAIL"
+    # Wait for a short time and check if Weston is running
+    sleep 1
+    if pidof weston > /dev/null; then
+        echo "OK"
+    else
+        echo "FAIL"
+    fi
 }
 
 stop() {
     printf "Stopping weston: "
-    killall weston
-    [ $? = 0 ] && echo "OK" || echo "FAIL"
+    killall weston > /dev/null 2>&1
+    # Wait for a short time and check if Weston is still running
+    sleep 1
+    if pidof weston > /dev/null; then
+        echo "FAIL"
+    else
+        echo "OK"
+    fi
 }
 
 case "$1" in
@@ -34,7 +46,6 @@ case "$1" in
         ;;
     restart|reload)
         stop
-        sleep 1
         start
         ;;
     *)
