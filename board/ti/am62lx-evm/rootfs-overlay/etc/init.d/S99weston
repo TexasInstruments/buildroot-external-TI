@@ -1,0 +1,56 @@
+#!/bin/sh
+#
+# Start weston
+#
+
+start() {
+    # Check if /tmp/wayland exists; if not, create it
+    if [ ! -d /tmp/wayland ]; then
+        mkdir -p /tmp/wayland
+        chmod 0700 /tmp/wayland
+    fi
+
+    # Set XDG_RUNTIME_DIR environment variable
+    export XDG_RUNTIME_DIR=/tmp/wayland
+
+    # Start Weston
+    printf "Starting weston: "
+    /usr/bin/weston > /var/log/weston.log 2>&1 &
+    # Wait for a short time and check if Weston is running
+    sleep 1
+    if pidof weston > /dev/null; then
+        echo "OK"
+    else
+        echo "FAIL"
+    fi
+}
+
+stop() {
+    printf "Stopping weston: "
+    killall weston > /dev/null 2>&1
+    # Wait for a short time and check if Weston is still running
+    sleep 1
+    if pidof weston > /dev/null; then
+        echo "FAIL"
+    else
+        echo "OK"
+    fi
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart|reload)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit 0

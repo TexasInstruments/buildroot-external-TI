@@ -1,3 +1,4 @@
 # Locally computed
 sha256  3a93cafbfd49f1bce19e97c4ad588d3db7b509be991e9c0d42b044baa0c69cbc  arm-trusted-firmware-00f1ec6b8740ccd403e641131e294aabacf2a48b.tar.gz
 sha256  b80e1869836242aba8d129e3194299834ab8037f144e7870939d44a290aa4ebe  arm-trusted-firmware-58b25570c9ef91753b14c2103f45f4be9dddb696.tar.gz
+sha256  78a76e525867547402cfbda177320014da593881922f50c5ac6860a83ccd4bbc  arm-trusted-firmware-5227171c079d0c7d22a6d37b5cec079c8c5bb4b1-git4.tar.gz
