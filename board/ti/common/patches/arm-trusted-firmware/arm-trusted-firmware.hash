@@ -3,3 +3,4 @@ sha256  3a93cafbfd49f1bce19e97c4ad588d3db7b509be991e9c0d42b044baa0c69cbc  arm-tr
 sha256  b80e1869836242aba8d129e3194299834ab8037f144e7870939d44a290aa4ebe  arm-trusted-firmware-58b25570c9ef91753b14c2103f45f4be9dddb696.tar.gz
 sha256  78a76e525867547402cfbda177320014da593881922f50c5ac6860a83ccd4bbc  arm-trusted-firmware-5227171c079d0c7d22a6d37b5cec079c8c5bb4b1-git4.tar.gz
 sha256  14a42ca08132afe9cecce9edf0ecf112822fe6660dc097537dfb0af3834809fd  arm-trusted-firmware-c660da3784b824f920c1d2d7f768cb2ed5cf9d4c-git4.tar.gz
+sha256  f981eae9edb6afb7ef9578596f4c6ae45ed65b4427d3ae0fc590aa781473ac1d  arm-trusted-firmware-11.00.05-git4.tar.gz

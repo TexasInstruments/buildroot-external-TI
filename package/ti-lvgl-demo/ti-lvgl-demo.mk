@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-TI_LVGL_DEMO_VERSION = db276032668a1c4e81040cf4c3c00fabb79f383c
+TI_LVGL_DEMO_VERSION = v11.00.05.02
 TI_LVGL_DEMO_SITE = https://github.com/texasinstruments/ti-lvgl-demo.git
 TI_LVGL_DEMO_SITE_METHOD = git
 TI_LVGL_DEMO_GIT_SUBMODULES = YES
