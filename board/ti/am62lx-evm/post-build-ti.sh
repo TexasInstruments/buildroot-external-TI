@@ -32,5 +32,7 @@ mkdir -p $TARGET_DIR/lib/firmware/ti-connectivity
 
 cp $BINARIES_DIR/Image $TARGET_DIR/boot
 cp $BINARIES_DIR/$dtb_file $TARGET_DIR/boot/dtb/ti
+cp $BUILD_DIR/linux-*/arch/arm64/boot/dts/ti/k3-am62l3-evm-dsi-rpi-7inch-panel.dtbo $TARGET_DIR/boot/dtb/ti
 mv $BINARIES_DIR/tiboot3-am62lx-hs-fs-evm.bin $BINARIES_DIR/tiboot3.bin
 cp $BUILD_DIR/ti-k3-boot-firmware-*/ti-connectivity/* $TARGET_DIR/lib/firmware/ti-connectivity/
+cp $BR2_EXTERNAL_TI_PATH/board/ti/am62lx-evm/uEnv.txt $BINARIES_DIR/uEnv.txt

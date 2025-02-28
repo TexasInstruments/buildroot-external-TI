@@ -1,0 +1,13 @@
+config BR2_PACKAGE_TI_LVGL_DEMO
+	bool "ti-lvgl-demo"
+	depends on BR2_PACKAGE_LIBDRM
+	depends on BR2_TOOLCHAIN_BUILDROOT_CXX
+	depends on BR2_PACKAGE_ALSA_UTILS
+	depends on BR2_PACKAGE_ALSA_UTILS_AMIXER
+	depends on BR2_PACKAGE_MOSQUITTO
+	depends on BR2_PACKAGE_SDL2
+	depends on BR2_PACKAGE_SDL2_IMAGE
+	help
+	  LVGL application for TI SoCs.
+
+	  https://github.com/TexasInstruments/ti-lvgl-demo
