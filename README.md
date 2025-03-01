@@ -15,21 +15,24 @@ tree uses the versions provided and supported by TI.
 
 ## Available configurations
 
-This `BR2_EXTERNAL` tree provides two Buildroot configurations:
+This `BR2_EXTERNAL` tree provides following Buildroot configurations:
 
 1. `ti_release_am62x_sk_defconfig` for Linux
-2. `ti_release_am62x_sk_rt_defconfig` for RT-Linux.
+2. `ti_release_am62x_sk_rt_defconfig` for RT-Linux
+3. `ti_release_am62lx_evm_defconfig` for Linux
+4. `ti_release_am62lx_evm_rt_defconfig` for RT-Linux
 
-It supports following variants of AM62x EVM:
+It supports following variants of AM62x EVM and AM62Lx EVM:
 - [SK-AM62](https://www.ti.com/tool/SK-AM62)
 - [SK-AM62B](https://www.ti.com/tool/SK-AM62B)
 - [SK-AM62B-P1](https://www.ti.com/tool/SK-AM62B-P1)
+- [AM62L-EVM](https://www.ti.com/tool/TMDS62LEVM)
 
 It builds and packages following main components:
 - [ti-u-boot](https://git.ti.com/cgit/ti-u-boot/ti-u-boot/)
 - [ti-linux-kernel](https://git.ti.com/cgit/ti-linux-kernel/ti-linux-kernel/)
 - [optee](https://github.com/OP-TEE/optee_os)
-- [TF-A](https://github.com/ARM-software/arm-trusted-firmware)
+- [TF-A](https://github.com/TexasInstruments/arm-trusted-firmware)
 - [ti-linux-firmware](https://git.ti.com/cgit/processor-firmware/ti-linux-firmware)
 - [busybox](https://git.busybox.net/busybox/)
 
@@ -38,6 +41,7 @@ It builds and packages following main components:
 Pre-built buildroot SD card images are available at:
 
 - [PROCESSOR-SDK-AM62X](https://www.ti.com/tool/PROCESSOR-SDK-AM62X)
+- [AM62L-PROCESSOR-SDK](https://www.ti.com/tool/AM62L-PROCESSOR-SDK)
 
 ## Building Buildroot from source
 
@@ -68,16 +72,16 @@ information refer
 - Clone the Buildroot repository to local machine.
 
 ```bash
-$ git clone -b 2024.05.3 https://github.com/buildroot/buildroot
+$ git clone -b 2024.11.1 https://github.com/buildroot/buildroot
 ```
 
 - Clone the `BR2_EXTERNAL` tree:
 
 ```bash
-$ git clone -b 10.01.10.04 https://github.com/TexasInstruments/buildroot-external-TI.git
+$ git clone -b 11.00.05.02 https://github.com/TexasInstruments/buildroot-external-TI.git
 ```
 
-- The directories for `buildroot` and `buildroot-external-ti` are now located
+- The directories for `buildroot` and `buildroot-external-TI` are now located
 side-by-side.
 
 ### Configure and build
@@ -99,15 +103,21 @@ $ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62x_sk_defconfig
 
 # For AM62X RT-Linux
 $ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62x_sk_rt_defconfig
+
+# For AM62LX Linux
+$ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62lx_evm_defconfig
+
+# For AM62LX RT-Linux
+$ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62lx_evm_rt_defconfig
 ```
 
 - To further customize the Buildroot configuration, run `make menuconfig`. This
 step is optional but useful if you need to make specific adjustments.
 
-- Build the SD card image for SDK 10.1
+- Build the SD card image for SDK 11.0
 
 ```bash
-buildroot/ $ make TI_K3_BOOT_FIRMWARE_VERSION=10.01.10
+buildroot/ $ make TI_K3_BOOT_FIRMWARE_VERSION=11.00.05
 ```
 
 - This process compiles the necessary components and creates the root filesystem,
@@ -136,6 +146,7 @@ with the console on UART. You can log-in as `root` with no password.
 # Going further
 
 * [PROCESSOR-SDK-AM62X](https://www.ti.com/tool/PROCESSOR-SDK-AM62X#overview)
+* [AM62L-PROCESSOR-SDK](https://www.ti.com/tool/AM62L-PROCESSOR-SDK)
 
 # References
 
