@@ -78,7 +78,7 @@ $ git clone -b 2024.11.1 https://github.com/buildroot/buildroot
 - Clone the `BR2_EXTERNAL` tree:
 
 ```bash
-$ git clone -b 11.00.05.02 https://github.com/TexasInstruments/buildroot-external-TI.git
+$ git clone -b 11.00.09.04 https://github.com/TexasInstruments/buildroot-external-TI.git
 ```
 
 - The directories for `buildroot` and `buildroot-external-TI` are now located
@@ -117,7 +117,7 @@ step is optional but useful if you need to make specific adjustments.
 - Build the SD card image for SDK 11.0
 
 ```bash
-buildroot/ $ make TI_K3_BOOT_FIRMWARE_VERSION=11.00.05
+buildroot/ $ make TI_K3_BOOT_FIRMWARE_VERSION=11.00.09
 ```
 
 - This process compiles the necessary components and creates the root filesystem,
