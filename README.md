@@ -69,16 +69,23 @@ information refer
 
 ### Steps to build the SD card image
 
+- The below table shows versions of buildroot and BR2_EXTERNAL for each platform.
+
+| Platform    | Buildroot version tag | Buildroot External Tree  |
+| ----------- | --------------------- |--------------------------|
+|  SK-AM62B   |      2025.02          |      11.01.05.03         |
+|  AM62L-EVM  |      2024.11.3        |      11.00.15.05         |
+
 - Clone the Buildroot repository to local machine.
 
 ```bash
-$ git clone -b 2024.11.3 https://github.com/buildroot/buildroot
+$ git clone -b 2025.02 https://github.com/buildroot/buildroot
 ```
 
 - Clone the `BR2_EXTERNAL` tree:
 
 ```bash
-$ git clone -b 11.00.15.05 https://github.com/TexasInstruments/buildroot-external-TI.git
+$ git clone -b 11.01.05.03 https://github.com/TexasInstruments/buildroot-external-TI.git
 ```
 
 - The directories for `buildroot` and `buildroot-external-TI` are now located
