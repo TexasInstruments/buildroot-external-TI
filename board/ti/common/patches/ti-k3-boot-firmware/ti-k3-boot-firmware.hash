@@ -21,3 +21,4 @@ sha256  f14d48782dc19f0af70ff188c97babcba49956981eab80087ff76b1d541302f2  ti-lin
 sha256  39cc6d12b8ce13f296fbf45fcb0cb0bcdf1a4a37b4e0a3f55a3fe4f820ce939d  ti-linux-firmware-11.01.05.tar.xz
 sha256  9c8da6865ae87beae6e2fe8cc1d80179b72ffc439ba8db904ff1a0f558d69d31  ti-linux-firmware-11.01.07.tar.xz
 sha256  86999335869d8783a7a925e7dbd145ffa97b09c94124f28ef56443b325add90a  ti-k3-boot-firmware-11.01.14.tar.gz
+sha256  3a3f9674812a14c692815a6ab0ab20f1a8977d31a6d6c96378fd2655fb751b07  ti-k3-boot-firmware-11.01.16.tar.gz
