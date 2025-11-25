@@ -1,0 +1,4 @@
+config BR2_PACKAGE_K3CONF
+    bool "k3conf"
+    help
+      Diagnostic tool for TI K3 processors.
