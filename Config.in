@@ -1,1 +1,2 @@
 source "$BR2_EXTERNAL_TI_PATH/package/ti-lvgl-demo/Config.in"
+source "$BR2_EXTERNAL_TI_PATH/package/k3conf/Config.in"
