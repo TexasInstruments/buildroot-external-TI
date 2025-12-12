@@ -71,21 +71,21 @@ information refer
 
 - The below table shows versions of buildroot and BR2_EXTERNAL for each platform.
 
-| Platform    | Buildroot version tag | Buildroot External Tree  |
-| ----------- | --------------------- |--------------------------|
-|  SK-AM62B   |      2025.02.x        |      11.01.05.03         |
-|  AM62L-EVM  |      2025.02.x        |      11.01.16.13         |
+| Platform    | Buildroot version tag | Buildroot External Tree Tag |
+| ----------- | --------------------- |-----------------------------|
+|  SK-AM62B   |      2025.08.02       |      11.02.08.02            |
+|  AM62L-EVM  |      2025.08.02       |      11.02.08.02            |
 
 - Clone the Buildroot repository to local machine.
 
 ```bash
-$ git clone -b 2025.02.x https://github.com/buildroot/buildroot
+$ git clone -b <Buildroot version tag> https://github.com/buildroot/buildroot
 ```
 
 - Clone the `BR2_EXTERNAL` tree:
 
 ```bash
-$ git clone -b 11.01.16.13 https://github.com/TexasInstruments/buildroot-external-TI.git
+$ git clone -b <Buildroot External Tree Tag> https://github.com/TexasInstruments/buildroot-external-TI.git
 ```
 
 - The directories for `buildroot` and `buildroot-external-TI` are now located
@@ -121,10 +121,10 @@ $ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62lx_evm_rt_defconfig
 - To further customize the Buildroot configuration, run `make menuconfig`. This
 step is optional but useful if you need to make specific adjustments.
 
-- Build the SD card image for SDK 11.01
+- Build the SD card image for SDK 11.02
 
 ```bash
-buildroot/ $ make TI_K3_BOOT_FIRMWARE_VERSION=11.01.16
+buildroot/ $ make TI_K3_BOOT_FIRMWARE_VERSION=11.02.08
 ```
 
 - This process compiles the necessary components and creates the root filesystem,
