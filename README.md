@@ -19,13 +19,16 @@ This `BR2_EXTERNAL` tree provides following Buildroot configurations:
 
 1. `ti_release_am62x_sk_defconfig` for Linux
 2. `ti_release_am62x_sk_rt_defconfig` for RT-Linux
-3. `ti_release_am62lx_evm_defconfig` for Linux
-4. `ti_release_am62lx_evm_rt_defconfig` for RT-Linux
+3. `ti_release_am62p_sk_defconfig` for Linux
+4. `ti_release_am62p_sk_rt_defconfig` for RT-Linux
+5. `ti_release_am62lx_evm_defconfig` for Linux
+6. `ti_release_am62lx_evm_rt_defconfig` for RT-Linux
 
 It supports following variants of AM62x EVM and AM62Lx EVM:
 - [SK-AM62](https://www.ti.com/tool/SK-AM62)
 - [SK-AM62B](https://www.ti.com/tool/SK-AM62B)
 - [SK-AM62B-P1](https://www.ti.com/tool/SK-AM62B-P1)
+- [SK-AM62P-LP](https://www.ti.com/tool/SK-AM62P-LP)
 - [AM62L-EVM](https://www.ti.com/tool/TMDS62LEVM)
 
 It builds and packages following main components:
@@ -74,6 +77,7 @@ information refer
 | Platform    | Buildroot version tag | Buildroot External Tree Tag |
 | ----------- | --------------------- |-----------------------------|
 |  SK-AM62B   |      2026.02          |      12.00.00.07.04         |
+|  SK-AM62P   |      2026.02          |      12.00.00.07.04         |
 |  AM62L-EVM  |      2026.02          |      12.00.00.07.04         |
 
 - Clone the Buildroot repository to local machine.
@@ -110,6 +114,12 @@ $ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62x_sk_defconfig
 
 # For AM62X RT-Linux
 $ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62x_sk_rt_defconfig
+
+# For AM62P Linux
+$ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62p_sk_defconfig
+
+# For AM62P RT-Linux
+$ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62p_sk_rt_defconfig
 
 # For AM62LX Linux
 $ make BR2_EXTERNAL=../buildroot-external-TI ti_release_am62lx_evm_defconfig
@@ -153,6 +163,7 @@ with the console on UART. You can log-in as `root` with no password.
 # Going further
 
 * [PROCESSOR-SDK-AM62X](https://www.ti.com/tool/PROCESSOR-SDK-AM62X#overview)
+* [PROCESSOR-SDK-AM62P](https://www.ti.com/tool/PROCESSOR-SDK-AM62P)
 * [AM62L-PROCESSOR-SDK](https://www.ti.com/tool/AM62L-PROCESSOR-SDK)
 
 # References
