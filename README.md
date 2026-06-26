@@ -76,9 +76,9 @@ information refer
 
 | Platform    | Buildroot version tag | Buildroot External Tree Tag |
 | ----------- | --------------------- |-----------------------------|
-|  SK-AM62B   |      2026.02          |      12.00.00.07.04         |
-|  SK-AM62P   |      2026.02          |      12.00.00.07.04         |
-|  AM62L-EVM  |      2026.02          |      12.00.00.07.04         |
+|  SK-AM62B   |      2026.02          |      12.01.00.02.04         |
+|  SK-AM62P   |      2026.02          |      12.01.00.02.04         |
+|  AM62L-EVM  |      2026.02          |      12.01.00.02.04         |
 
 - Clone the Buildroot repository to local machine.
 
