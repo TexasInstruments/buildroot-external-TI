@@ -30,3 +30,5 @@ sha256  8ff8d6c7bba4cf7b2cfe2fdf2ca77e7350440b5c06f6824670e20faf22bf7995  ti-k3-
 sha256  fe5cc3f69a9079dc6b382d9b62368b800bf243f11ff7349be0000c6fdce695cb  ti-k3-boot-firmware-12.00.00.05.tar.gz
 sha256  12105ee0ea89da652a49a822b8aefe0c8475c684cbf67a39b3e9c935ac066d39  ti-k3-boot-firmware-12.00.00.06.tar.gz
 sha256  bda9084dd4da08cc603953ee5f18bb0e1850b708d8d2e0748ab0c3ca7b6d9707  ti-k3-boot-firmware-12.00.00.07.tar.gz
+sha256  48bd35f7b3ca0036cd2cb5a85d12b1d7d6699663a676c99f7815b875838e7d8a  ti-k3-boot-firmware-12.01.00.02.tar.gz
+sha256  90de8a53ca55c58b9df1bef6ddab66bdd867c9fde5d1ca3cc8acc0408bf0fa20  ti-k3-boot-firmware-12.01.00.03.tar.gz
