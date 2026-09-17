@@ -1,0 +1,26 @@
+config BR2_PACKAGE_TI_IMG_ROGUE_DRIVER
+	bool "ti-img-rogue-driver"
+	depends on BR2_LINUX_KERNEL
+	depends on BR2_aarch64
+	help
+	  PowerVR Rogue GPU kernel module for AM62x SoCs.
+
+	  Enables GPU hardware support on AM62x boards.
+	  Configured for wrynose release with Kernel 6.18
+	  and PowerVR SDK version 26.1.6967606.
+
+	  This is an out-of-tree kernel module that must be compiled
+	  against the kernel build directory.
+
+	  https://git.ti.com/git/graphics/ti-img-rogue-driver.git
+
+if BR2_PACKAGE_TI_IMG_ROGUE_DRIVER
+
+config BR2_PACKAGE_TI_IMG_ROGUE_DRIVER_DEBUG
+	bool "Build debug version"
+	default n
+	help
+	  Build with debug symbols and optimizations disabled.
+	  Produces larger .ko file but allows kernel debugging.
+
+endif

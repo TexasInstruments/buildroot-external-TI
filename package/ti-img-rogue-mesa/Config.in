@@ -1,0 +1,26 @@
+config BR2_PACKAGE_TI_IMG_ROGUE_MESA
+	bool "ti-img-rogue-mesa"
+	depends on BR2_PACKAGE_TI_IMG_ROGUE_UMLIBS
+	select BR2_PACKAGE_HAS_LIBEGL
+	select BR2_PACKAGE_HAS_LIBGBM
+	select BR2_PACKAGE_LIBGBM_HAS_FEATURE_DMA_BUF
+	select BR2_PACKAGE_LIBGBM_HAS_FEATURE_FORMAT_MODIFIER_PLANE_COUNT
+	select BR2_PACKAGE_HAS_LIBGLES
+	select BR2_PACKAGE_EXPAT
+	select BR2_PACKAGE_LIBDRM
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_WAYLAND_PROTOCOLS if BR2_PACKAGE_WAYLAND
+	help
+	  TI PowerVR Rogue Mesa shim. Provides EGL/GBM/GLES via Mesa's
+	  "pvr" gallium driver, which dlopen()s libpvr_dri_support.so
+	  from ti-img-rogue-umlibs at runtime. Required for glmark2 and
+	  any other EGL/GBM-based GPU client on the Rogue OOT stack.
+
+if BR2_PACKAGE_TI_IMG_ROGUE_MESA
+config BR2_PACKAGE_PROVIDES_LIBEGL
+	default "ti-img-rogue-mesa"
+config BR2_PACKAGE_PROVIDES_LIBGBM
+	default "ti-img-rogue-mesa"
+config BR2_PACKAGE_PROVIDES_LIBGLES
+	default "ti-img-rogue-mesa"
+endif
