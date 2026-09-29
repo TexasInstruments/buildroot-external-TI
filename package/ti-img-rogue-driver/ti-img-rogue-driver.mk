@@ -6,7 +6,7 @@
 
 # Package metadata
 # Pinned commit is on branch linuxws/scarthgap/k6.12/25.2.6850647
-TI_IMG_ROGUE_DRIVER_VERSION = 	72723eea0cab47c20e5734c1c7b9a441ed2d74c2 
+TI_IMG_ROGUE_DRIVER_VERSION = 	50e14e425cbac240b2da93fac0cfcc987a4959c3
 
 # Source repository
 TI_IMG_ROGUE_DRIVER_SITE = https://git.ti.com/git/graphics/ti-img-rogue-driver.git

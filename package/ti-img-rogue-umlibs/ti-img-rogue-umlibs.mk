@@ -7,7 +7,7 @@
 # Package metadata
 # Pinned commit is on branch linuxws/scarthgap/k6.12/25.2.6850647
 # Must match the ti-img-rogue-driver (KM) version/branch being used.
-TI_IMG_ROGUE_UMLIBS_VERSION = adcbb5c620ff172da4152c02a2fee8f42dc4c472
+TI_IMG_ROGUE_UMLIBS_VERSION = a59e0e6b92dfee7aad046b839cf6ae644355b89d
 
 TI_IMG_ROGUE_UMLIBS_SITE = https://git.ti.com/git/graphics/ti-img-rogue-umlibs.git
 TI_IMG_ROGUE_UMLIBS_SITE_METHOD = git

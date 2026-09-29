@@ -1,4 +1,2 @@
 # Locally calculated sha256sum
-sha256  0f3fca70df255ff226d8cb80506bc3e56572ac02dfcd63656b1b256acb1cba29  ti-img-rogue-driver-72723eea0cab47c20e5734c1c7b9a441ed2d74c2-git4.tar.gz
-# sha256 TMP ti-img-rogue-driver-50e14e425cbac240b2da93fac0cfcc987a4959c3-git4.tar.gz
-# sha256  a16975f7a2f349ba1394b65766f0dc09040a1bc554fe1db9ac1658fbae42aa5b  ti-img-rogue-driver-50e14e425cbac240b2da93fac0cfcc987a4959c3-git4.tar.gz
+sha256  a16975f7a2f349ba1394b65766f0dc09040a1bc554fe1db9ac1658fbae42aa5b  ti-img-rogue-driver-50e14e425cbac240b2da93fac0cfcc987a4959c3-git4.tar.gz
