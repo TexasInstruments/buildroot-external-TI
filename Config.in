@@ -1,5 +1,4 @@
 source "$BR2_EXTERNAL_TI_PATH/package/ti-lvgl-demo/Config.in"
-source "$BR2_EXTERNAL_TI_PATH/package/k3conf/Config.in"
 source "$BR2_EXTERNAL_TI_PATH/package/ti-img-rogue-driver/Config.in"
 source "$BR2_EXTERNAL_TI_PATH/package/ti-img-rogue-umlibs/Config.in"
 source "$BR2_EXTERNAL_TI_PATH/package/ti-img-rogue-mesa/Config.in"
