@@ -1,0 +1,29 @@
+config BR2_PACKAGE_TI_IMG_ROGUE_UMLIBS
+	bool "ti-img-rogue-umlibs"
+	depends on BR2_LINUX_KERNEL
+	depends on BR2_aarch64
+	depends on BR2_PACKAGE_TI_IMG_ROGUE_DRIVER
+	help
+	  PowerVR Rogue GPU userspace libraries (EGL/GLESv2/GBM) for
+	  AM62x SoCs.
+
+	  Provides the proprietary Imagination Technologies userspace
+	  libraries needed to actually render on the PowerVR Rogue GPU.
+	  The ti-img-rogue-driver kernel module alone only provides device
+	  access - it cannot render anything by itself.
+
+	  Configured for wrynose release with Kernel 6.18 and PowerVR SDK
+	  version 26.1.6967606, matching ti-img-rogue-driver.
+
+	  https://git.ti.com/git/graphics/ti-img-rogue-umlibs.git
+
+if BR2_PACKAGE_TI_IMG_ROGUE_UMLIBS
+
+config BR2_PACKAGE_TI_IMG_ROGUE_UMLIBS_DEBUG
+	bool "Install debug build"
+	default n
+	help
+	  Install the debug variant of the userspace libraries instead
+	  of release.
+
+endif
